@@ -1,0 +1,74 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Bandas de Guerra</h1>
+  <mat-grid-list cols="1" rowHeight="600px">
+    <!-- Formulario -->
+    <mat-grid-tile>
+      <mat-card class="dashboard-card large-card">
+        <mat-card-header>
+          <mat-card-title>Agrega una nueva banda de guerra:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill">
+              <mat-label>Nombre de la Banda</mat-label>
+              <input matInput type="text" formControlName="name" placeholder="Nombre de la banda" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Zona de la Banda</mat-label>
+              <input matInput type="text" formControlName="zone" placeholder="Zona de la banda" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Categoría</mat-label>
+              <mat-select formControlName="category">
+                <mat-option value="A">A</mat-option>
+                <mat-option value="B">B</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <button mat-button color="primary" type="submit">Guardar</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <!-- Listado de Bandas Categoría A -->
+    <mat-grid-tile>
+      <mat-card class="dashboard-card large-card">
+        <mat-card-header>
+          <mat-card-title>Bandas Categoría A:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <ul>
+            <li *ngFor="let band of savedBandsA; let i = index" class="list-item">
+              <p><strong>{{ band.name }}</strong></p>
+              <p>Zona: {{ band.zone }}</p>
+              <p>Categoría: {{ band.category }}</p>
+              <button mat-button color="warn" type="button" (click)="removeBand(i, 'A')">Eliminar</button>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <!-- Listado de Bandas Categoría B -->
+    <mat-grid-tile>
+      <mat-card class="dashboard-card large-card">
+        <mat-card-header>
+          <mat-card-title>Bandas Categoría B:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <ul>
+            <li *ngFor="let band of savedBandsB; let i = index" class="list-item">
+              <p><strong>{{ band.name }}</strong></p>
+              <p>Zona: {{ band.zone }}</p>
+              <p>Categoría: {{ band.category }}</p>
+              <button mat-button color="warn" type="button" (click)="removeBand(i, 'B')">Eliminar</button>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,0 +1,16 @@
+h2 {
+  color: #000080; // Azul marino
+}
+
+mat-dialog-content {
+  color: #a9a9a9; // Gris acero
+}
+
+mat-dialog-actions button {
+  background-color: #000080; // Azul marino
+  color: #ffd700; // Dorado
+  &:hover {
+    background-color: #ffd700; // Dorado en hover
+    color: #000080; // Azul marino en hover
+  }
+}

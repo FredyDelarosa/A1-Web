@@ -1,0 +1,77 @@
+.large-card {
+  height: 100%;
+  width: 50%;  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: #000080; // Azul marino
+  color: #ffd700; // Dorado
+  &:hover {
+    background-color: #ffd700; // Dorado en hover
+    color: #000080; // Azul marino en hover
+  }
+}
+
+.list-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ffd700; // Línea dorada clara debajo de cada item
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1.5rem;
+}
+
+.grid-container {
+  padding: 20px;
+  background-color: #a9a9a9; // Gris acero
+}
+
+.mat-card-header {
+  background-color: #000080; // Azul marino para el header de las cards
+  color: #ffd700; // Dorado
+}
+
+.dashboard-card-content {
+  background-color: #f0e68c; // Fondo dorado claro
+}
+
+.mat-button {
+  background-color: #000080; // Azul marino para los botones
+  color: #ffd700; // Dorado
+}
+
+.mat-button:hover {
+  background-color: #ffd700; // Dorado en hover
+  color: #000080; // Azul marino en hover
+}
+
+.list-item p {
+  color: #000080; // Azul marino para textos
+}
+
+.list-item button {
+  background-color: #000080; // Azul marino para botones de eliminar
+  color: #ffd700; // Dorado
+  &:hover {
+    background-color: #ffd700; // Dorado en hover
+    color: #000080; // Azul marino en hover
+  }
+}
+
+

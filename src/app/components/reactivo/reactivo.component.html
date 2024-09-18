@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre de la Banda</mat-label>
+    <input matInput id="name" formControlName="name" placeholder="Nombre de la banda" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Zona de la Banda</mat-label>
+    <input matInput id="zone" formControlName="zone" placeholder="Zona de la banda" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Categoría</mat-label>
+    <input matInput id="category" formControlName="category" placeholder="Categoría de la banda" />
+  </mat-form-field>
+  
+  <button mat-raised-button color="primary" type="submit">Guardar</button>
+</form>

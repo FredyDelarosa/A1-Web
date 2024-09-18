@@ -1,0 +1,19 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+    mat-form-field {
+      width: 100%;
+    }
+  
+    button {
+      background-color: #000080; // Azul marino
+      color: #ffd700; // Dorado
+      &:hover {
+        background-color: #ffd700; // Dorado en hover
+        color: #000080; // Azul marino en hover
+      }
+    }
+  }
+  

@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/tipos-de-bandas" routerLinkActive="active">Tipos de bandas</a>
+      <a mat-list-item routerLink="/imagenes-de-eventos" routerLinkActive="active">Imágenes de eventos</a>
+      <a mat-list-item routerLink="/curiosidades" routerLinkActive="active">Curiosidades</a>
+    </mat-nav-list>    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      @if (isHandset$ | async) {
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      }
+    </mat-toolbar>
+    <app-header></app-header>
+     <app-dashboard></app-dashboard>
+     <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
